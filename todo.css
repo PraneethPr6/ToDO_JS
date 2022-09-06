@@ -1,0 +1,262 @@
+body {
+    background: #000000;
+    color: white;
+}
+#header {
+    font-size:56px;
+    display: flex;
+    margin-top: 60px;
+    margin-left: 130px;
+
+}
+#add {
+    position:relative;
+    left: 56%;
+    cursor: pointer;
+    color:blue;
+}
+.Add {
+   position: relative;
+    left: 56%;
+    cursor: pointer;
+}
+/* #back-button{
+    margin-left: 10%;
+   font-size: 40px;
+   display: none;
+}
+#back-icon{
+    z-index: 20;
+    font-size: 40px;   
+    color: red;
+    cursor: pointer;
+} */ 
+/* #card-dynamic-head{
+    justify-content: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: red;
+    display: none;
+/* } */
+/* .color-red{
+    color: red;
+} */
+#addnewlist {
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    top: 20px;
+    z-index: 1;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* /* width: 100px; */
+    /* height: 100px; */ 
+}
+#addnewlist-box {
+    width: 500px;
+    height: 200px;
+    border-radius: 8px;
+    padding: 30px 0 0px 0px;
+    text-align: center;
+    /* color: black; */
+    background-color:white;
+    animation: anim 0.2s ease-in 0s 1;
+}
+.addnewcolor{
+    color:red;
+    font-size:30px;
+    
+}
+.modal-content{
+    margin-top: 3%;
+}
+.addnewinner{
+    width: 400px;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    font-size:20px;
+}
+#addnewinners {
+    width: 400px;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    font-size:20px;
+}
+.addbutton{
+    border-radius: 100px;
+    margin-top: 20px;
+    color: white;
+    background-color:red;
+    font-size: 30px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+#addbutton-add{
+    border-radius: 100px;
+    margin-top: 20px;
+    color: white;
+    background-color:red;
+    font-size: 30px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#addbuttons{
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-left: 10%;
+    color: white;
+    background-color:red;
+    font-size: 30px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer; 
+}
+#addnewcard {
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    /* text-align: center; */
+    top: -10%;
+    z-index: 1;
+    /* color: white; */
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+/* #addnewcard-card {
+    border-radius:8px;
+    width: 30vw;
+    height: 28vh;
+    /* border: 1px solid rgb(165, 46, 46); */
+    /* padding: 10px 0 0 0px;
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    background-color:white;
+    animation: anim 0.2s ease-in 0s 1; 
+}*/
+.listinner{
+    font-size: 20px;
+    font-weight: 700;
+    /* color: #393E46; */
+    color:black;
+    animation: animcard 0.2s ease-in 0s 1;
+}
+/* .in-list-button{
+    cursor: pointer;
+} */
+#headertwo {
+    position: relative;
+    top: 50px;
+    margin-left: 100px;
+    color:white;
+    font-size: 50px;
+    /* font-weight: 800; */
+}
+#boxcontainer{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 10%;
+    width: 90%;
+   
+}
+.card{
+    list-style: none;
+    display: none;
+    position: relative;
+    min-height: 350px;
+    min-width: 19%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 3% 0 0 5%;
+    padding: 10px 0 0 0;
+    background:white;
+    animation: animate 0.2s ease-in 0s 1;
+}
+.card-head{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    color: red;
+    cursor: pointer;
+}
+.buttons-in-card{
+    display: flex;
+    font-size: 30px;
+}
+.add-button-in-card{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 25px;
+    margin-left: 15%;
+    cursor: pointer;
+    color: blue;
+    border: none;
+    background-color:white;
+}
+.delete-button-in-card{
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    color: red;
+    border: none;
+    background-color:white;
+}
+/* .list-element{
+    margin-top: 10%;
+    margin-bottom: 10%;
+} */
+
+#check-done{
+    color: black;
+    background-color: grey;
+    display: none;
+}
+.mark-as-done-class{
+    background-color:blue;
+    color: #EEEEEE;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px 4px 4px 4px;
+}
+
+
+
+
+
+/* @keyframes anim {
+    0% { transform: scale(0); };
+    50% { transform: scale(0.5); };
+    100% { transform: scale(1); };
+}
+
+@keyframes animate {
+    0% { transform: scaleX(0); };
+    100% { transform: scaleX(1) };
+}
+
+@keyframes animcard {
+    0% { transform: scaleY(0); };
+    100% { transform: scaleY(1) };
+} */
+
+
+
+
+
