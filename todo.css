@@ -1,5 +1,5 @@
 body {
-    background: #000000;
+    background:black;
     color: white;
 }
 #header {
@@ -7,7 +7,6 @@ body {
     display: flex;
     margin-top: 60px;
     margin-left: 130px;
-
 }
 #add {
     position:relative;
@@ -20,7 +19,7 @@ body {
     left: 56%;
     cursor: pointer;
 }
-/* #back-button{
+#back-button{
     margin-left: 10%;
    font-size: 40px;
    display: none;
@@ -30,26 +29,23 @@ body {
     font-size: 40px;   
     color: red;
     cursor: pointer;
-} */ 
-/* #card-dynamic-head{
+} 
+#box-card{
     justify-content: center;
     font-size: 55px;
     font-weight: 700;
     color: red;
     display: none;
-/* } */
-/* .color-red{
+}
+.color-red{
     color: red;
-} */
+}
 #addnewlist {
     display: none;
     position: fixed;
     padding: 20% 0 0 30%;
     top: 20px;
     z-index: 1;
-    /* background-color: rgba(0, 0, 0, 0.8); */
-    /* /* width: 100px; */
-    /* height: 100px; */ 
 }
 #addnewlist-box {
     width: 500px;
@@ -57,9 +53,7 @@ body {
     border-radius: 8px;
     padding: 30px 0 0px 0px;
     text-align: center;
-    /* color: black; */
     background-color:white;
-    animation: anim 0.2s ease-in 0s 1;
 }
 .addnewcolor{
     color:red;
@@ -122,43 +116,27 @@ body {
     display: none;
     position: fixed;
     padding: 20% 0 0 30%;
-    /* text-align: center; */
     top: -10%;
     z-index: 1;
-    /* color: white; */
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
     height: 100vh;
 }
-/* #addnewcard-card {
-    border-radius:8px;
-    width: 30vw;
-    height: 28vh;
-    /* border: 1px solid rgb(165, 46, 46); */
-    /* padding: 10px 0 0 0px;
-    text-align: center;
-    padding-top: 20px;
-    color: black;
-    background-color:white;
-    animation: anim 0.2s ease-in 0s 1; 
-}*/
 .listinner{
     font-size: 20px;
     font-weight: 700;
-    /* color: #393E46; */
     color:black;
     animation: animcard 0.2s ease-in 0s 1;
 }
-/* .in-list-button{
+.in-list-button{
     cursor: pointer;
-} */
+}
 #headertwo {
     position: relative;
     top: 50px;
     margin-left: 100px;
     color:white;
     font-size: 50px;
-    /* font-weight: 800; */
 }
 #boxcontainer{
     display: flex;
@@ -172,24 +150,22 @@ body {
    
 }
 .card{
-    list-style: none;
     display: none;
     position: relative;
     min-height: 350px;
-    min-width: 19%;
+    min-width: 250px;
     text-align: center;
     border-radius: 10px;
     margin: 3% 0 0 5%;
     padding: 10px 0 0 0;
     background:white;
-    animation: animate 0.2s ease-in 0s 1;
 }
 .card-head{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 25px;
     font-weight: 500;
-    color: red;
+    color:red;
     cursor: pointer;
 }
 .buttons-in-card{
@@ -203,60 +179,31 @@ body {
     font-size: 25px;
     margin-left: 15%;
     cursor: pointer;
-    color: blue;
+    color:red;
     border: none;
     background-color:white;
 }
 .delete-button-in-card{
     position: absolute;
     bottom: 10px;
-    right: 50px;
+    right: 200px;
     font-size: 25px;
     cursor: pointer;
     color: red;
     border: none;
     background-color:white;
 }
-/* .list-element{
-    margin-top: 10%;
-    margin-bottom: 10%;
-} */
-
 #check-done{
     color: black;
-    background-color: grey;
+    background-color: yellowgreen;
     display: none;
-}
+} 
 .mark-as-done-class{
     background-color:blue;
-    color: #EEEEEE;
     font-size: 10px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 3px 4px 4px 4px;
-}
-
-
-
-
-
-/* @keyframes anim {
-    0% { transform: scale(0); };
-    50% { transform: scale(0.5); };
-    100% { transform: scale(1); };
-}
-
-@keyframes animate {
-    0% { transform: scaleX(0); };
-    100% { transform: scaleX(1) };
-}
-
-@keyframes animcard {
-    0% { transform: scaleY(0); };
-    100% { transform: scaleY(1) };
-} */
-
-
-
-
+    color: white;
+} 
 
