@@ -7,7 +7,6 @@
     <title>Todo App JS</title>
     <link rel="stylesheet" href="./todo.css">
     <script src="https://kit.fontawesome.com/393bd706fe.js"></script>
-    
 </head>
 <body>
     <div id="header">
@@ -15,21 +14,20 @@
             <span>Tasks</span> List
         </div>
         <div id="add" onclick="plus()">
-            <i class="fas fa-plus-circle color-blue"></i> 
-        </div> 
-            <span id="add-button-text"></span>
-           <div class="Add">Add Item</div>              
+            <i class="fas fa-plus-circle color-blue"></i>
+        </div>
+        <span id="add-button-text"></span>
+        <div class="Add">Add Item</div>
     </div>
-     <!-- <div id="back-button">
-        <i id="back-icon" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>
-        Go back
-    </div>  -->
-    <div id="card-dynamic-head"></div>
+    <div id="back-button">
+        <i id="back-icon" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>back
+    </div>
+    <div id="box-card"></div>
     <div id="addnewlist">
         <div id="addnewlist-box">
             <span class="addnewcolor">Add New List</span>
             <br><br>
-            <input  class="addnewinner" type="text" placeholder="Add New List"> <br></input>
+            <input id="listName" class="addnewinner" type="text" placeholder="Add New List"> <br></input>
             <button id="addbutton-add" onclick="addCard()">Add</button>
             <button id="addbuttons" onclick="closeCard()">Close</button>
         </div>
@@ -38,38 +36,29 @@
         <div id="addnewlist-box">
             <span class="addnewcolor">Add New Item</span>
             <br><br>
-            <input id="addnewinners"  type="text" placeholder="Add New Item"> <br></input>
+            <input id="addnewinners" type="text" placeholder="Add New Item"> <br></input>
             <button class="addbutton" onclick="addList()">Add</button>
             <button id="addbuttons" onclick="closeList()">Close</button>
         </div>
     </div>
-     <div style="display: none;" class="listinner">
-        <button onclick="completedTask(this)">Mark Done</button>
-     </div>
-     <div id="headertwo">
-         No Items in the Todo list
-        
-     </div>
-     
-     
+    <div style="display: none;" class="listinner">
+        <button onclick="completedTask(this)"></button>
+    </div>
+    <div id="headertwo">
+        No Items in the Todo list</div>
     <div id="boxcontainer">
         <div class="card">
-            <div class="wrap-cont">
-            <option class="card-head" onclick="headerFunc(this.value)"></option>
-            <br><hr><div class="add-list-after-this"></div>
-            <br>
-            <div class="buttons-in-card">
-                <button class="fas fa-trash delete-button-in-card"></button>    
-                <button class="fas fa-plus-circle add-button-in-card"></button>
-            </div>
-            </div>
-        </div>
+                <option class="card-head" onclick="headerFunc(this.value)"></option>
+                <br>
+                <hr>
+                <div class="add-list-after-this"></div>
+                <br>
+                <div class="buttons-in-card">
+                    <button class="fas fa-trash delete-button-in-card"></button>
+                    <button class="fas fa-plus-circle add-button-in-card"></button>
+                </div>
+           </div>
     </div>
     <script src="./todo.js"></script>
-    <!-- <script>
-        arr = [1,2,3,2];
-        console.log((arr.filter(n => n==2)).length);
-    </script> -->
-
 </body>
 </html>
