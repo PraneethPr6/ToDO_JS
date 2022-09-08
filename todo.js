@@ -13,16 +13,7 @@ function addCard(){
 function closeCard(){
     document.getElementById("addnewlist").style.display = "none";
 }
-function createObj(title){
-    document.getElementById("headertwo").style.display = "none";
-    var card_obj = {
-        title: title,
-        id: Date.now(),
-        subtask
-    };
-    array.add(card_obj);
-    createCard(card_obj.id);
-};
+
 function addList(){
     var todo_item = document.querySelector(".listinner").cloneNode(true);
     var card_item = document.getElementById("addnewinners").value;
@@ -38,7 +29,7 @@ function addList(){
     done_item.setAttribute('value',`${Date.now()}`);
     done_item.setAttribute('onclick','completedTask(this.value)');
     done_item.innerText = ' Mark Done';
-    done_item.setAttribute('style','font-size:15 px;cursor:pointer; height:18px; border-radius:10px;')
+    done_item.setAttribute('style','font-size:15 px;cursor:pointer; height:20px; border-radius:10px;')
     todo_item.appendChild(done_item);
     todo_item.setAttribute('onClick',"completedTask(this.value)");
      for(obj of array){
@@ -52,6 +43,16 @@ function addList(){
     document.getElementById(`${pr}`).getElementsByClassName('add-list-after-this')[0].appendChild(todo_item).appendChild(done_item);
     closeList();
 }
+function createObj(title){
+    document.getElementById("headertwo").style.display = "none";
+    var card_obj = {
+        title: title,
+        id: Date.now(),
+        subtask
+    };
+    array.add(card_obj);
+    createCard(card_obj.id);
+};
 function closeList(){
     document.getElementById('addnewcard').style.display = "none";
 }
@@ -88,7 +89,8 @@ function display(card){
     document.getElementById('headertwo').style.display = 'none'
     array.forEach(element => {
         card.id = element.id;
-        card.querySelector(".card-head").innerHTML = element.title;
+        card.querySelector(".card-head").innerText = document.getElementById("listName").value;
+        // card.querySelector(".card-head").innerHTML = element.title;
         card.querySelector(".card-head").setAttribute('value',`${element.id}`);
         card.setAttribute("value",`${element.id}`);
         card.setAttribute("display","block");
@@ -106,37 +108,37 @@ function display(card){
 }
 function headerFunc(val){
     var card_header;
-    for(let ele of array){
-        for(let id in ele){
-            if(ele[id]==val){
-                card_header = ele.title;
+    for(let list of array){
+        for(let id in list){
+            if(list[id]==val){
+                card_header = list.title;
                 break;
             };
         };
     };
-    document.querySelector("#app-name").style.display = 'none';
+    document.querySelector("#name-app").style.display = 'none';
     document.querySelector("#add-button-text").style.display = 'none';
-    for(let ele of array){
-            if(ele.id==val){
-                document.getElementById(`${ele.id}`).style.display = 'block';
+    for(let list of array){
+            if(list.id==val){
+                document.getElementById(`${list.id}`).style.display = 'block';
             }
             else {
-                document.getElementById(`${ele.id}`).style.display = 'none';
+                document.getElementById(`${list.id}`).style.display = 'none';
             }
     };
-    document.getElementById('card-dynamic-head').innerText = `${card_header}`;
-    document.getElementById('card-dynamic-head').style.display = 'flex'
+    document.getElementById('box-card').innerText = `${card_header}`;
+    document.getElementById('box-card').style.display = 'flex'
     document.getElementById('back-button').style.display = 'block'
     title_flag = true;
 };
 function dispalyAll(){
     title_flag = false;
-    document.querySelector("#app-name").style.display = 'block';
+    document.querySelector("#name-app").style.display = 'block';
     document.querySelector("#add-button-text").style.display = 'inline-block';
     document.getElementById('back-button').style.display = 'none';
     for(let ele of array){
             document.getElementById(`${ele.id}`).style.display = 'block';
     };
-    document.getElementById('card-dynamic-head').innerText = ``;
-    document.getElementById('card-dynamic-head').style.display = 'none';
+    document.getElementById('box-card').innerText = ``;
+    document.getElementById('box-card').style.display = 'none';
 }
